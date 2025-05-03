@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BakProduction</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <section class="hero">
+    <div class="overlay">
+      <div class="text-block">
+        <h1>Привет! Меня зовут Бахрам!</h1>
+        <h2>Нужны качественные красивые интерактивные сайты за хорошую цену? <br>Тогда ты по адресу!!!</h2>
+        <button class="price-button"  onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">Цены</button>
+        <button class="price-button"  onclick="document.getElementById('achievments').scrollIntoView({ behavior: 'smooth' })">достижения</button>
+      </div>
+    </div>
+  </section>
+  <section class="skills-section" id="achievments">
+        <h2>Мои навыки и достижения</h2>
+        <div class="carousel-wrapper">
+          <button class="arrow left" id="prevBtn">&#8249;</button>
+          <div class="carousel" id="carousel">
+            <div class="card">
+              <img src="images/hcj.png" alt="Навык 1">
+              <h3>Хорошее владение HTML CSS JS</h3>
+              <p>Опыт работы 1 год сделал не мало сайтов с ними и изучил углубленно</p>
+            </div>
+            <div class="card">
+              <img src="images/roof.png" alt="Навык 2">
+              <h3>Сделал уже 2 заказа</h3>
+              <p>1 Это сайт для завода по производству металло черепицы</p>
+            </div>
+            <div class="card">
+                <img src="images/myste.png" alt="Навык 2">
+                <h3>Второй заказ</h3>
+                <p>Сделал сайт для студии по рисованию</p>
+              </div>
+              <div class="card">
+                <img src="images/dj.png" alt="Навык 2">
+                <h3>Владею хорошим уровнем Django and Postgresql</h3>
+                <p>Изучаю джанго уже больше 6 месяцов и научился им пользоваться на уровне Джуна сделал несколько пэт проектов и проекты для хакатонов</p>
+              </div>
+              <div class="card">
+                <img src="skill2.jpg" alt="Навык 2">
+                <h3>Сделал экосайт с html css js django</h3>
+                <p>Этот сайт помогает людям объединятся и улучшать окружающую среду с помощью этого сайта я занял 2 место на хакатоне Ecohack</p>
+              </div>
+              <div class="card">
+                <img src="skill2.jpg" alt="Навык 2">
+                <h3>Сделал сайтархив с html css js django</h3>
+                <p>Этот сайт помогает людям делиться творчеством и идеями а также делиться с историей с другими людьми с помощью этого сайта я также занял 2 место на ArhiveHack</p>
+              </div>
+          </div>
+          <button class="arrow right" id="nextBtn">&#8250;</button>
+        </div>
+
+        <script src="script.js"></script>
+  </section>
+  <section class="pricing-section" id="products">
+    <h2>Цены на услуги</h2>
+    <div class="pricing-cards">
+      <div class="price-card">
+        <h3>Лендинг</h3>
+        <p>Одностраничный сайт</p>
+        <span class="price">от 15 000 ₸</span>
+        <button class="price-btn">Узнать цену</button>
+      </div>
+      <div class="price-card">
+        <h3>Многостраничник (Frontend)</h3>
+        <p>До 5 страниц, адаптивный</p>
+        <span class="price">от 30 000 ₸</span>
+        <button class="price-btn">Узнать цену</button>
+      </div>
+      <div class="price-card">
+        <h3>Сайт с Backend + Frontend</h3>
+        <p>Полноценный сайт с админкой</p>
+        <span class="price">от 60 000 ₸</span>
+        <button class="price-btn">Узнать цену</button>
+      </div>
+    </div>
+  </section>
+  <div class="calc-form">
+    <div class="step active" id="step1">
+      <h2>1. Выберите какой сайт вам нужен</h2>
+      <div class="options" id="roofForms">
+        <div class="option">Одностраничный сайт</div>
+        <div class="option">Многостраничник (Frontend)</div>
+        <div class="option">Сайт с Backend + Frontend </div>
+      </div>
+      <div class="nav-buttons">
+        <button disabled>Назад</button>
+        <button onclick="nextStep()">Далее</button>
+      </div>
+    </div>
+  
+    <div class="step" id="step2">
+      <h2>2. Комментарий опишите сайт</h2>
+      <textarea id="comment" rows="4" placeholder="Если есть дополнительные пожелания, напишите их здесь..."></textarea>
+      <div class="nav-buttons">
+        <button onclick="prevStep()">Назад</button>
+        <button onclick="nextStep()">Далее</button>
+      </div>
+    </div>
+  
+    <div class="step" id="step3">
+      <h2>3. Ваше имя и номер WhatsApp</h2>
+      <input type="text" id="name" placeholder="Ваше имя">
+      <input type="text" id="phone" placeholder="Например, 77001234567">
+      <div class="nav-buttons">
+        <button onclick="prevStep()">Назад</button>
+        <button onclick="sendWhatsApp()">Отправить</button>
+      </div>
+    </div>
+  </div>
+</body>
+<footer class="footer">
+    <div class="footer-row">
+      <span class="footer-name">BakProduction © 2025</span>
+      <div class="footer-icons">
+        <a href="tel:+77086252008" title="Позвонить">
+          <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://www.instagram.com/your_username" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/77086252008" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+  
+</html>
