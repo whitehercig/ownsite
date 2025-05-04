@@ -15,7 +15,7 @@ body, html {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* полупрозрачный слой */
+    background-color: rgba(0, 0, 0, 0.3); 
     display: flex;
     flex-direction: column;
     align-items: center;
